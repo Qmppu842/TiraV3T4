@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- *
+ * 
  * @author Qmppu842
  */
 public class TiraV3T4_not_a_countingsort {
@@ -12,7 +12,7 @@ public class TiraV3T4_not_a_countingsort {
     public static int size = 1000000;
     public static int offsetOfValues = 1;
     public static int valuesMax = 1000000;
-    public static int testThisManyTimes = 1000;
+    public static int testThisManyTimes = 10000;
 
     /**
      * @param args the command line arguments
@@ -177,7 +177,7 @@ public class TiraV3T4_not_a_countingsort {
         long countingAvg = countingTime / testThisManyTimes;
         long quickAvg = quickTime / testThisManyTimes;
         long arraysAvg = arraySort / testThisManyTimes;
-        System.out.println("\033[31;1m" + "Avarage results: " + "\033[0m");
+        System.out.println("\033[31;1m" + "Average results: " + "\033[0m");
         System.out.println("Counting avg time: " + countingAvg);
         System.out.println("Counting avg time in ms: " + countingAvg / 1000000);
         System.out.println("Quick avg time: " + quickAvg);
