@@ -9,10 +9,10 @@ import java.util.Random;
  */
 public class TiraV3T4_not_a_countingsort {
 
-    public static int size = 10;
+    public static int size = 1000000;
     public static int offsetOfValues = 1;
-    public static int valuesMax = 10;
-    public static int testThisManyTimes = 10000;
+    public static int valuesMax = 1000000;
+    public static int testThisManyTimes = 1000;
 
     /**
      * @param args the command line arguments
@@ -27,7 +27,7 @@ public class TiraV3T4_not_a_countingsort {
 
         // Do the dinosaur      
         long bigBang = System.nanoTime();
-        quickSort(clearlyMonaLisa);
+        quickSort(clearlyMonaLisa, 0, size-1);
         long sunDies = System.nanoTime();
         Arrays.sort(fakeMonaLisa);
         long heatDeathOfUniverse = System.nanoTime();
@@ -94,8 +94,37 @@ public class TiraV3T4_not_a_countingsort {
 
     }
 
-    private static void quickSort(int[] painting) {
+    private static void quickSort(int[] painting, int left, int right) {
+        int index = divideEtImpera(painting, left, right);
+        if (left < index - 1) {
+            quickSort(painting, left, index - 1);
+        }
+        if (index < right) {
+            quickSort(painting, index, right);
+        }
+    }
 
+    private static int divideEtImpera(int[] painting, int left, int right) {
+        int i = left;
+        int j = right;
+        int swapper;
+        int pivot = painting[(left + right) / 2];
+        while (i <= j) {
+            while (painting[i] < pivot) {
+                i++;
+            }
+            while (painting[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                swapper = painting[i];
+                painting[i] = painting[j];
+                painting[j] = swapper;
+                i++;
+                j--;
+            }
+        }
+        return i;
     }
 
     /**
@@ -137,7 +166,7 @@ public class TiraV3T4_not_a_countingsort {
             long eka = System.nanoTime();
             countingSort(asd);
             long toka = System.nanoTime();
-            quickSort(zxc);
+            quickSort(zxc, 0 , zxc.length-1);
             long kolmas = System.nanoTime();
             Arrays.sort(qwe);
             long nelos = System.nanoTime();
@@ -154,7 +183,7 @@ public class TiraV3T4_not_a_countingsort {
         System.out.println("Quick avg time: " + quickAvg);
         System.out.println("Quick avg time in ms: " + quickAvg / 1000000);
         System.out.println("Arrays avg time: " + arraysAvg);
-        System.out.println("Arrays avg timein ms: " + arraysAvg / 1000000);
+        System.out.println("Arrays avg time in ms: " + arraysAvg / 1000000);
 
     }
 
