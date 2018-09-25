@@ -2,7 +2,7 @@
 code: [Quick link to code](https://github.com/Qmppu842/TiraV3T4/blob/master/src/tirav3t4_not_a_countingsort/TiraV3T4_not_a_countingsort.java)
 
 ## Test for Tehtävä 4 and Tehtävä 5
-#### Eka = no good for counting sort.
+### Eka = no good for counting sort.
 size = 1000  
 values from 1 to 100 000 000  
 averaged over 100 tests.  
@@ -17,7 +17,7 @@ Arrays avg time: 52814
 **Arrays avg time in ms: 0**  
 
 
-#### Toka = Nice for counting sort.
+### Toka = Nice for counting sort.
 size = 1 000 000  
 values from 1 to 1 000 000  
 averaged over 10000 tests.  
