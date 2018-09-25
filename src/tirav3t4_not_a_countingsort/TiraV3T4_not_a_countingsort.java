@@ -58,7 +58,7 @@ public class TiraV3T4_not_a_countingsort {
         }
 
         if (museumCurator) {
-            System.out.println("No problems. These both are clearly original Mona Lisa paintings.");
+            System.out.println("No problems. All of these are clearly original Mona Lisa paintings.");
             System.out.println("\033[31;1m" + "Wait a minute..." + "\033[0m");
         } else {
             System.out.println("This is forgery! " + "\033[34;1m" + "POLICE!!!" + "\033[0m");
