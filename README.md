@@ -32,4 +32,5 @@ Arrays avg time: 86934680
 **Arrays avg time in ms: 86**  
 
 
-Fun facts:
+Fun facts:  
+![alt text](https://github.com/Qmppu842/TiraV3T4/blob/master/funfact.JPG "Not that long, I guess.")
