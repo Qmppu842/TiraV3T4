@@ -31,10 +31,13 @@ public class TiraV3T4_not_a_countingsort {
         
         
         long bigBang = System.nanoTime();
-        
+        radixSort(clearlyMonaLisa);
         long sunDies = System.nanoTime();
         Arrays.sort(fakeMonaLisa);
         long heatDeathOfUniverse = System.nanoTime();
+        
+        long timeToCompleteExams = sunDies - bigBang;
+        long timeToFindJob = heatDeathOfUniverse - sunDies;
         
         // Validate tables
         boolean museumCurator = true;
@@ -46,6 +49,7 @@ public class TiraV3T4_not_a_countingsort {
             }
         }
         
+               
         if (museumCurator) {
             System.out.println("No problems. These both are clearly original Mona Lisa paintings.");
             System.out.println("\033[32;1m"+"Wait a minute..." + "\033[0m");
@@ -53,9 +57,30 @@ public class TiraV3T4_not_a_countingsort {
             System.out.println("This is forgery! " +"\033[34;1m" + "POLICE!!!" + "\033[0m");
         
         }
+        
+        if (size <= 25) {
+            System.out.println("MonaLisa: ");
+            System.out.println(Arrays.toString(monaLisa));
+            System.out.println();
+            System.out.println("End result radix: ");
+            System.out.println(Arrays.toString(clearlyMonaLisa));
+            System.out.println("End result Arrays.sort: ");
+            System.out.println(Arrays.toString(fakeMonaLisa));
+        }
+        System.out.println();
+        System.out.println("Lo(n)g time ago: ");
+        System.out.println("Radix: " + timeToCompleteExams);
+        System.out.println("Radix: " + timeToCompleteExams /1000000 + "ms");
+        System.out.println();
+        System.out.println("Arrays.sort: " + timeToFindJob);        
+        System.out.println("Arrays.sort: " + timeToFindJob / 1000000 + "ms");
+        System.out.println();
+        
     }
     
+    private static void radixSort(int[] painting){
     
+    }
     
 
 }
